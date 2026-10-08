@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#153650">
+  <meta name="description" content="SCSASM 2026 interactive conference programme">
+  <title>SCSASM 2026 | Conference Programme</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.5.3/papaparse.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.2.6/purify.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell">
+      <div class="eyebrow">Scientific Programme</div>
+      <h1>SCSASM 2026</h1>
+      <p>Conference Programme</p>
+    </div>
+  </header>
+
+  <main class="shell" id="main">
+    <section aria-label="Browse conference programme" class="programme">
+      <div id="date-tabs" class="date-tabs" role="tablist" aria-label="Conference date"></div>
+
+      <div class="filter-panel">
+        <div class="filter-grid">
+          <label class="field search-field">Search sessions
+            <input id="search" type="search" placeholder="Search names or details…" autocomplete="off">
+          </label>
+          <label class="field">Track
+            <select id="track-filter"><option value="">All tracks</option></select>
+          </label>
+          <label class="field">Room / location
+            <select id="location-filter"><option value="">All locations</option></select>
+          </label>
+        </div>
+        <div class="filter-footer"><button type="button" id="clear-filters" class="text-button">Clear filters</button></div>
+      </div>
+
+      <div class="results-heading">
+        <div><h2 id="selected-date-heading">Conference sessions</h2><p id="results-count" aria-live="polite"></p></div>
+      </div>
+      <div id="status" class="status" role="status" aria-live="polite">Loading the latest programme…</div>
+      <div id="session-list" class="session-list"></div>
+    </section>
+  </main>
+  <footer class="site-footer shell">SCSASM 2026 · Programme information is subject to change.</footer>
+</body>
+</html>
